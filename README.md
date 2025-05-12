@@ -8,22 +8,38 @@ Download & Install protoc:
 https://github.com/protocolbuffers/protobuf/releases
 (protoc-25.1-win64.zip)
 
-Floder structure will be like this:
+##Floder structure will be like this:
 -----------------------------------
 
 grpc-greeter/
 ├── client/
-│   └── main.go
+│ └── main.go
 ├── gen/
-│   └── helloworldpb/
-│       ├── helloworld.pb.go
-│       └── helloworld_grpc.pb.go
+│ └── helloworldpb/
+│ ├── helloworld.pb.go
+│ └── helloworld_grpc.pb.go
 ├── proto/
-│   └── helloworld.proto
+│ └── helloworld.proto
 ├── server/
-│   └── main.go
+│ └── main.go
 └── go.mod
 
+- **client/**: Contains the client-side logic for communicating with the gRPC server.
+  - `main.go`: The entry point for the client, which connects to the gRPC server and calls the service.
+  
+- **gen/**: Contains the generated Go code from the `.proto` file.
+  - **helloworldpb/**: This folder contains the Go files generated from `helloworld.proto`.
+    - `helloworld.pb.go`: The Go struct definitions for the gRPC messages.
+    - `helloworld_grpc.pb.go`: The Go code for the gRPC client and server methods.
+
+- **proto/**: Contains the `.proto` file(s) that define the gRPC service and messages.
+  - `helloworld.proto`: The Protocol Buffers definition for the Greeter service.
+
+- **server/**: Contains the server-side logic for the gRPC service.
+  - `main.go`: The entry point for the server, which implements the Greeter service.
+
+- **go.mod**: The Go module file that defines the project dependencies.
+  
 helloworld.proto: Need to delcare the services with request and response objects.
 -----------------
 syntax = "proto3";
