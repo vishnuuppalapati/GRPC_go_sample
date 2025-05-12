@@ -64,10 +64,10 @@ message HelloReply {
 
 Proto cmd execution:  terminal path should be in (github.com/EnsurityTechnologies/gosamples/grpcsample/proto)
 --------------------
-if proto exe recognizes globally and internal project --
+if proto exe recognizes globally and internal project :
 protoc --go_out=../gen/helloworldpb --go-grpc_out=../gen/helloworldpb --go_opt=paths=source_relative --go-grpc_opt=paths=source_relative helloworld.proto
 
-if not recognizes in the internal project but recognizes in globally --
+if not recognizes in the internal project but recognizes in globally:
 & "C:\tools\protoc\bin\protoc.exe" --go_out=../gen/helloworldpb --go-grpc_out=../gen/helloworldpb --go_opt=paths=source_relative --go-grpc_opt=paths=source_relative helloworld.proto
 
 server/main.go:
