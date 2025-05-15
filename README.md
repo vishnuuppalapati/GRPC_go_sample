@@ -5,7 +5,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 Download & Install protoc:
 --------------------------
-https://github.com/protocolbuffers/protobuf/releases
+CMD to install Protoc:winget install protobuf
 (protoc-25.1-win64.zip)
 
 ##Floder structure will be like this:
