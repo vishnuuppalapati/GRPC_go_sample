@@ -1,27 +1,40 @@
 Install the grpc files globally:
 --------------------------------
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 Download & Install protoc:
 --------------------------
 CMD to install Protoc:winget install protobuf
+
 (protoc-25.1-win64.zip)
 
 ##Floder structure will be like this:
 -----------------------------------
 
 grpc-greeter/
+
 ├── client/
-│ └── main.go
+
+    │ └── main.go
+
 ├── gen/
-│ └── helloworldpb/
-│ ├── helloworld.pb.go
-│ └── helloworld_grpc.pb.go
+
+    │ └── helloworldpb/
+
+        │ ├── helloworld.pb.go
+
+        │ └── helloworld_grpc.pb.go
+
 ├── proto/
-│ └── helloworld.proto
+
+    │ └── helloworld.proto
+
 ├── server/
-│ └── main.go
+
+    │ └── main.go
+
 └── go.mod
 
 - **client/**: Contains the client-side logic for communicating with the gRPC server.
